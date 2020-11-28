@@ -78,11 +78,10 @@ def imagen_hangman(oportunidad):
 
 def imagen_inicio():
     print('''
-
     _                                             
-    | |                                            
-    | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
-    | '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+    | |           
+    | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __
+    | '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_  
     | | | | (_| | | | | (_| | | | | | | (_| | | | |
     |_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
                         __/ |                      
@@ -103,6 +102,7 @@ imagen_inicio()
 contador_oportunidades = 0
 contador_ganador = 0
 game_over = False
+
 while not game_over:
     print(' '.join(lista_rayas))
     letra = input('ingresa letra a descubrir: ')
@@ -120,6 +120,7 @@ while not game_over:
             game_over = True
 
     else:
+        os.system('cls')
         # print(mostrar_en_rayas_esta_letra(palabra[index], index))
         contador_oportunidades += 1
         print(imagen_hangman(contador_oportunidades))
